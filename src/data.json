@@ -1,0 +1,14 @@
+[  {    "name": "John Doe",    "classes": ["Calculus", "Biology", "Chemistry"],
+    "availability": [9, 10, 11, 13, 14, 15]
+  },
+  {
+    "name": "Jane Doe",
+    "classes": ["History", "English", "Psychology"],
+    "availability": [9, 10, 11, 12, 13, 14, 15]
+  },
+  {
+    "name": "Bob Smith",
+    "classes": ["Computer Science", "Mathematics", "Physics"],
+    "availability": [9, 10, 11, 12, 13, 14, 15, 16]
+  }
+]
