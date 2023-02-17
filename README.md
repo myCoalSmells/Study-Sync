@@ -1,3 +1,7 @@
+Project for CS35L, winter 2023.
+
+This app wil match students together into study groups based on their common classes and overlapping schedules.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
