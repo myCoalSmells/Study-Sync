@@ -72,6 +72,14 @@ const App = () => (
     {students.map(student => (
       <StudentCard key={student.name} {...student} />
     ))}
+    <GoogleLogin
+    success={credentialResponse => {
+      console.log(credentialResponse);
+    }}
+    error={() => {
+      console.log('Login Failed');
+    }}
+    />
   </div>
 );
 
