@@ -1,28 +1,9 @@
-// import React, { useState, useEffect } from "react";
-// import { StudentCard } from "./StudentCard.js";
-// import "./App.css";
-
-// const App = () => {
-//   const [students, setStudents] = useState([]);
-
-//   useEffect(() => {
-//     fetch("./data.json")
-//       .then(res => res.json())
-//       .then(data => setStudents(data));
-//   }, []);
-
-//   return (
-//     <div className="app">
-//       {students.map(student => (
-//         <StudentCard key={student.name} {...student} />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default App;
 import React from "react";
+import { StudentCard } from "./StudentCard";
 
+/// CSS Modules
+import AppCSS from "./App.module.css"
+// Get Data from database
 const students = [
   {
     "name": "John Doe",
@@ -41,44 +22,39 @@ const students = [
   }
 ];
 
-const StudentCard = ({ name, classes, availability }) => (
-  <div style={cardStyles}>
-    <h2>{name}</h2>
-    <p>Classes: {classes.join(", ")}</p>
-    <p>Availability: {availability.join(", ")}</p>
-    <button style={buttonStyles}>View Profile</button>
-  </div>
-);
+// App render
+function App() {
+  return(
+    <div className={AppCSS.maincontainer}>
 
-const cardStyles = {
-  border: "1px solid gray",
-  padding: "20px",
-  margin: "20px",
-  width: "300px",
-  textAlign: "center"
-};
+      <div>
+        <button>
+          View Account Information
+        </button>
+        <button>
+          Log In
+        </button>
+        <button>
+          Sign up
+        </button>
+      </div>
 
-const buttonStyles = {
-  backgroundColor: "blue",
-  color: "white",
-  padding: "10px 20px",
-  border: "none",
-  borderRadius: "5px",
-  cursor: "pointer"
-};
+      <div className={AppCSS.app}>
+        <div className={AppCSS.sccontainer}>
+          {students.map(student => (
+            <StudentCard key={student.name} {...student}/>
+          ))}
+        </div>
+        <div>
+          More stuff next to cards if needed
+        </div>
+      </div>
 
-const App = () => (
-  <div style={appStyles}>
-    {students.map(student => (
-      <StudentCard key={student.name} {...student} />
-    ))}
-  </div>
-);
-
-const appStyles = {
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center"
-};
+      <div>
+        More down here
+      </div>
+    </div>
+  );
+}
 
 export default App;

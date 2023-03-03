@@ -1,0 +1,20 @@
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.app {
+  display: flex;
+  background-color: rgb(192, 124, 255);
+}
+
+.sccontainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1b42f;
+  max-width: 1300px;
+  padding: 10px 10px;
+}
